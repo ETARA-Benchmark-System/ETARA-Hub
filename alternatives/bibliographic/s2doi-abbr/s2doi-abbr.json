@@ -1,0 +1,14 @@
+{
+  "webservice" : "/s2doi-abbr/work",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "doi" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "doi", "$doi"]
+  ] ,
+  "returnTemplate": "s2doi-abbr/s2doi-abbr.json.ftl",
+  "db": "sample_s2doi"
+}

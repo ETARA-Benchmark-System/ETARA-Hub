@@ -1,0 +1,15 @@
+{
+  "webservice" : "/singleResponse/movie/getReviewedMovies",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "q" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "type", "http://api.omdb.com/sample/Reviewer"],
+    ["?subject", "name", "$q"]
+  ],
+  "returnTemplate": "getReviewedMovies/getReviewedMovies.json.ftl",
+  "db": "sample_omdb"
+}

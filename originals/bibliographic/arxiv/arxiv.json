@@ -1,0 +1,16 @@
+{
+    "returnTemplate": "arxiv/arxiv.json.ftl",
+    "errorType": "jsonWithStatus",
+    "inputs": ["q"],
+    "latency": "1000",
+    "maxRequests": "2000",
+    "where": [[
+        "?subject",
+        "key",
+        "$q"
+    ]],
+    "webservice": "/arxiv/work",
+    "type": "precise",
+    "maxRequestsPerMinute": "60",
+    "db": "sample_arxiv"
+}

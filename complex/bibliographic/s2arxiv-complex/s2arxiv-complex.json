@@ -1,0 +1,14 @@
+{
+  "webservice" : "/s2arxiv-complex/work",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "arxivId" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "arxivId", "$arxivId"]
+  ],
+  "returnTemplate": "s2arxiv-complex/s2arxiv-complex.json.ftl",
+  "db": "sample_s2arxiv"
+}

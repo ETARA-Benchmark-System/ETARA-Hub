@@ -1,0 +1,15 @@
+{
+  "webservice" : "/singleResponse/movie/getActors",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "id" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "imdb_id", "$id"]
+  ],
+  "inputMode": "lowerCase",
+  "returnTemplate": "getActors/getActors.json.ftl",
+  "db": "sample_omdb"
+}

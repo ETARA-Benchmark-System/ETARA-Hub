@@ -1,0 +1,16 @@
+{
+    "returnTemplate": "/testapi1/testapi1.json.ftl",
+    "errorType": "server",
+    "inputs": ["doi"],
+    "latency": "500",
+    "maxRequests": "2000",
+    "where": [[
+        "?subject",
+        "doi",
+        "$doi"
+    ]],
+    "webservice": "/testapi1/work",
+    "type": "precise",
+    "maxRequestsPerMinute": "60",
+    "db": "sample_crossref"
+}

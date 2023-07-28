@@ -1,0 +1,14 @@
+{
+  "webservice" : "/arxiv-flat/work",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "arxivId" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "arxivId", "$arxivId"]
+  ],
+  "returnTemplate": "arxiv-flat/arxiv-flat.json.ftl",
+  "db": "sample_arxiv"
+}

@@ -1,0 +1,14 @@
+{
+  "webservice" : "/scigraph-flat/work",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "doi" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "doi", "$doi"]
+  ],
+  "returnTemplate": "scigraph-flat/scigraph-flat.json.ftl",
+  "db": "sample_scigraph"
+}

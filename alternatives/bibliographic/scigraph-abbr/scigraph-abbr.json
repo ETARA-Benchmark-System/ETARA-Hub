@@ -1,0 +1,14 @@
+{
+  "webservice" : "/scigraph-abbr/work",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "doi" ],
+  "latency": "1000",
+  "maxRequests": "2000",
+  "maxRequestsPerMinute": "60",
+  "where" : [
+    ["?subject", "doi", "$doi"]
+  ],
+  "returnTemplate": "scigraph-abbr/scigraph-abbr.json.ftl",
+  "db": "sample_scigraph"
+}

@@ -1,0 +1,15 @@
+{
+  "webservice" : "/omdb-abbr/movie",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "id" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "imdb_id", "$id"]
+  ],
+  "inputMode": "lowerCase",
+  "returnTemplate": "omdb-abbr/omdb-abbr.json.ftl",
+  "db": "sample_omdb"
+}

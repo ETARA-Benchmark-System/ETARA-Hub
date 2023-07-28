@@ -1,0 +1,14 @@
+{
+  "webservice" : "/crossref-flat/work",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "doi" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "doi", "$doi"]
+  ],
+  "returnTemplate": "crossref-flat/crossref-flat.json.ftl",
+  "db": "crossref"
+}

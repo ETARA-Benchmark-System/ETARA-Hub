@@ -1,0 +1,15 @@
+{
+  "webservice" : "/singleResponse/movie/getReviewers",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "id" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "type", "http://api.omdb.com/sample/Movie"],
+    ["?subject", "imdb_id", "$id"]
+  ],
+  "returnTemplate": "getReviewers/getReviewers.json.ftl",
+  "db": "sample_omdb"
+}

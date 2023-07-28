@@ -1,0 +1,15 @@
+{
+  "webservice" : "/singleResponse/bib/getPublicationYear",
+  "errorType": "jsonWithStatus",
+  "type": "precise",
+  "inputs" : [ "doi" ],
+  "latency": "1000",
+  "maxRequestsPerMinute": "60",
+  "maxRequests": "2000",
+  "where" : [
+    ["?subject", "doi", "$doi"]
+  ],
+  "inputMode": "lowerCase",
+  "returnTemplate": "getPublicationYear/getPublicationYear.json.ftl",
+  "db": "sample_crossref"
+}
